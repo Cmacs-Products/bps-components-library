@@ -25,6 +25,13 @@ input.ant-input:not(.bps-input-opened):hover {
   box-shadow: none !important;
 }
 
+.ant-input-affix-wrapper { 
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .ant-input-disabled:not(.bps-custom-disabled):hover {
   opacity: 1 !important;
   border-color: #363636 !important;
@@ -80,22 +87,37 @@ input.ant-input:not(.bps-input-opened):hover {
   cursor: url(/assets/bps-icons/sps_inaccessible_icon_grey.svg), auto !important;
 }
 
-.has-error .ant-select-selection,
-.ng-pristine.ng-invalid.ng-touched .ant-select-selection {
+.has-error .ant-select-selector,
+.ng-pristine.ng-invalid.ng-touched .ant-select-selector {
   border-color: #e94c0a !important;
 }
 
-.has-success .ant-select-selection {
+.has-error .ant-form-explain, .has-error .ant-form-split {
+  color: #f5222d;
+}
+
+.has-success .ant-select-selector {
   border-color: #00a2d1 !important;
 }
 
-.ant-select-selection {
+.ant-select-selector {
   height: 22px !important;
   border-radius: 11px !important;
   font-size: 11px !important;
   background-color: #363636 !important;
   border-color: #363636 !important;
   color: white !important;
+  line-height: 20px !important;
+  border-right: 1px solid #262626 !important;
+  margin-right: 19px !important;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-item, .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+    line-height: 20px !important;
+}
+
+.ant-select-clear {
+    background-color: transparent !important;
 }
 
 .ant-select-selection__rendered {
@@ -104,74 +126,90 @@ input.ant-input:not(.bps-input-opened):hover {
   margin-right: 19px !important;
 }
 
-.ant-select-selection__clear {
+.ant-select-close-icon {
   color: white !important;
   background-color: #484848 !important;
   right: 3px !important;
   font-size: 10px;
 }
 
+
 .ant-select-arrow {
-  color: white !important;
-  font-size: 8px !important;
-  top: 59% !important;
-  right: 6px !important;
+  height: 92% !important;
+  top: 7px !important;
+  margin-right: 0px !important;
+  border-left: 1px solid #0000005c !important;
+  padding-left: 5px !important;
+  color: #fff !important;
 }
 
-.ant-select-dropdown-menu-item{
+.ant-select-item, .ant-select-item-empty {
+  font-size: 11px !important;
+  min-height: 23px !important;
+  height: 23px !important;
   color: white !important;
   line-height: 13px !important;
 }
 
-.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled),
-.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled)
+.ant-select-item-option {
+  color: white !important;
+  line-height: 13px !important;
+}
+
+.ant-select-item-option:hover:not(.ant-select-item-option-disabled),
+.ant-select-item-option-active:not(.ant-select-item-option-disabled)
 {
   background-color: #484848 !important;
 }
 
-.ant-select-selection:hover {
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #484848 !important;
+  color: white !important;
+}
+
+.ant-select-selector:hover {
   background-color: #484848 !important;
   border: 1px solid transparent;
 }
 
-.ant-select-selection {
+.ant-select-selector {
   border: 1px solid transparent !important;
 }
 
-.ant-select-selection:focus {
+.ant-select-selector:focus {
   box-shadow: 0 0 8px 0 #00a2d1 !important;
   background-color: #363636 !important;
 }
 
-.ant-select-disabled .ant-select-selection:focus {
+.ant-select-disabled .ant-select-selector:focus {
   box-shadow: none !important;
 }
 
-.ant-select-disabled .ant-select-selection,
-.ant-select-disabled:hover .ant-select-selection {
+.ant-select-disabled .ant-select-selector,
+.ant-select-disabled:hover .ant-select-selector {
   background: #363636 !important;
   color: #666666 !important;
 }
 
-.ant-select-dropdown-menu-item-disabled,
+.ant-select-item-option-disabled,
 .ant-select-disabled .ant-select-arrow,
-.ant-select-dropdown-menu-item-disabled:hover,
+.ant-select-item-option-disabled:hover,
 .ant-select-disabled .ant-select-arrow path{
   color: #666666 !important;
   stroke: #666666 !important;
 }
 
-.ant-select-open .ant-select-selection{
+.ant-select-open .ant-select-selector{
   border-radius: 11px 11px 11px 0 !important;
   box-shadow: none !important;
   border-color: #363636 !important;
 }
 
-.ant-select-dropdown-menu-item:first-child {
+.ant-select-item-option:first-child {
   border-radius: 0 !important;
 }
 
-.ant-select-dropdown-menu-item:last-child {
+.ant-select-item-option:last-child {
   border-radius: 0 0 10px 10px !important;
 }
 

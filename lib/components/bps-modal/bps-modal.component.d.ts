@@ -2,13 +2,14 @@ import { FocusTrapFactory } from '@angular/cdk/a11y';
 import { Overlay, OverlayKeyboardDispatcher, OverlayRef } from '@angular/cdk/overlay';
 import { AfterViewInit, ChangeDetectorRef, ComponentFactoryResolver, ComponentRef, ElementRef, EventEmitter, OnChanges, OnDestroy, OnInit, SimpleChanges, TemplateRef, Type, ViewContainerRef } from '@angular/core';
 import { Observable } from 'rxjs';
-import { NzConfigService } from 'ng-zorro-antd/core';
 import { NzI18nService } from 'ng-zorro-antd/i18n';
 import { BpsModalFooterDirective } from './bps-modal-footer.directive';
 import { BpsModalRef } from './bps-modal-ref.class';
 import { ModalOptions, ModalButtonOptions, ModalType, OnClickCallback } from './bps-modal.type';
 import { BpsModalControlService } from './bps-modal-control.service';
 import { BpsModalConfig } from './bps-modal-config';
+import { NzConfigService } from '../bps-tree/tree/config.service';
+import * as i0 from "@angular/core";
 export declare const MODAL_ANIMATE_DURATION = 200;
 export declare const WRAP_CLASS_NAME = "ant-modal-wrap";
 export declare class BpsModalComponent<T = any, R = any> extends BpsModalRef<T, R> implements OnInit, OnChanges, AfterViewInit, OnDestroy, ModalOptions<T> {
@@ -144,4 +145,6 @@ export declare class BpsModalComponent<T = any, R = any> extends BpsModalRef<T, 
     private savePreviouslyFocusedElement;
     private trapFocus;
     private restoreFocus;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsModalComponent<any, any>, [null, null, null, null, null, null, null, null, null, null, { optional: true; }, null]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsModalComponent<any, any>, "bps-modal", ["bpsModal"], { "bpsVisible": { "alias": "bpsVisible"; "required": false; }; "bpsClosable": { "alias": "bpsClosable"; "required": false; }; "bpsOkLoading": { "alias": "bpsOkLoading"; "required": false; }; "bpsOkDisabled": { "alias": "bpsOkDisabled"; "required": false; }; "bpsCancelDisabled": { "alias": "bpsCancelDisabled"; "required": false; }; "bpsCancelLoading": { "alias": "bpsCancelLoading"; "required": false; }; "bpsKeyboard": { "alias": "bpsKeyboard"; "required": false; }; "bpsNoAnimation": { "alias": "bpsNoAnimation"; "required": false; }; "bpsModalDisabled": { "alias": "bpsModalDisabled"; "required": false; }; "bpsMask": { "alias": "bpsMask"; "required": false; }; "bpsMaskClosable": { "alias": "bpsMaskClosable"; "required": false; }; "bpsContent": { "alias": "bpsContent"; "required": false; }; "bpsComponentParams": { "alias": "bpsComponentParams"; "required": false; }; "bpsFooter": { "alias": "bpsFooter"; "required": false; }; "bpsGetContainer": { "alias": "bpsGetContainer"; "required": false; }; "bpsZIndex": { "alias": "bpsZIndex"; "required": false; }; "bpsWidth": { "alias": "bpsWidth"; "required": false; }; "bpsWrapClassName": { "alias": "bpsWrapClassName"; "required": false; }; "bpsClassName": { "alias": "bpsClassName"; "required": false; }; "bpsStyle": { "alias": "bpsStyle"; "required": false; }; "bpsTitle": { "alias": "bpsTitle"; "required": false; }; "bpsCloseIcon": { "alias": "bpsCloseIcon"; "required": false; }; "bpsMaskStyle": { "alias": "bpsMaskStyle"; "required": false; }; "bpsBodyStyle": { "alias": "bpsBodyStyle"; "required": false; }; "bpsOkText": { "alias": "bpsOkText"; "required": false; }; "bpsCancelText": { "alias": "bpsCancelText"; "required": false; }; "bpsOkType": { "alias": "bpsOkType"; "required": false; }; "bpsIconType": { "alias": "bpsIconType"; "required": false; }; "bpsModalType": { "alias": "bpsModalType"; "required": false; }; "bpsOnOk": { "alias": "bpsOnOk"; "required": false; }; "bpsOnCancel": { "alias": "bpsOnCancel"; "required": false; }; }, { "bpsOnOk": "bpsOnOk"; "bpsOnCancel": "bpsOnCancel"; "bpsAfterOpen": "bpsAfterOpen"; "bpsAfterClose": "bpsAfterClose"; "bpsVisibleChange": "bpsVisibleChange"; }, ["modalFooter"], ["*"], false, never>;
 }

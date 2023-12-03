@@ -1,20 +1,25 @@
 {
   "name": "bps-components-lib",
   "version": "0.0.1",
-  "peerDependencies": {
-    "@angular/common": "^9.0.7",
-    "@angular/core": "^9.0.7",
-    "tslib": "^1.10.0",
-    "@tinymce/tinymce-angular": "^4.0.0"
+  "dependencies": {
+    "tslib": "^2.0.0"
   },
-  "main": "bundles/bps-components-lib.umd.js",
-  "module": "fesm5/bps-components-lib.js",
-  "es2015": "fesm2015/bps-components-lib.js",
-  "esm5": "esm5/bps-components-lib.js",
-  "esm2015": "esm2015/bps-components-lib.js",
-  "fesm5": "fesm5/bps-components-lib.js",
-  "fesm2015": "fesm2015/bps-components-lib.js",
-  "typings": "bps-components-lib.d.ts",
-  "metadata": "bps-components-lib.metadata.json",
-  "sideEffects": false
+  "peerDependencies": {},
+  "module": "fesm2022/bps-components-lib.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/bps-components-lib.mjs",
+      "esm": "./esm2022/bps-components-lib.mjs",
+      "default": "./fesm2022/bps-components-lib.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
 }

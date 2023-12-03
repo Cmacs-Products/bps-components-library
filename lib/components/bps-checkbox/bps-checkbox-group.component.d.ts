@@ -1,6 +1,9 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
-import { ChangeDetectorRef, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Direction, Directionality } from '@angular/cdk/bidi';
+import { ChangeDetectorRef, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
+import { BooleanInput, OnChangeType, OnTouchedType } from 'ng-zorro-antd/core/types';
+import * as i0 from "@angular/core";
 export interface NzCheckBoxOptionInterface {
     label: string;
     value: string;
@@ -11,17 +14,24 @@ export declare class BpsCheckboxGroupComponent implements ControlValueAccessor, 
     private elementRef;
     private focusMonitor;
     private cdr;
-    onChange: (value: any) => void;
-    onTouched: () => any;
+    private directionality;
+    static ngAcceptInputType_nzDisabled: BooleanInput;
+    onChange: OnChangeType;
+    onTouched: OnTouchedType;
     options: NzCheckBoxOptionInterface[];
     bpsDisabled: boolean;
-    onOptionChange(): void;
-    trackByOption(_index: number, option: NzCheckBoxOptionInterface): string;
-    constructor(elementRef: ElementRef, focusMonitor: FocusMonitor, cdr: ChangeDetectorRef, renderer: Renderer2);
+    dir: Direction;
+    private destroy$;
+    private isNzDisableFirstChange;
+    trackByOption(_: number, option: NzCheckBoxOptionInterface): string;
+    onCheckedChange(option: NzCheckBoxOptionInterface, checked: boolean): void;
+    constructor(elementRef: ElementRef, focusMonitor: FocusMonitor, cdr: ChangeDetectorRef, directionality: Directionality);
     ngOnInit(): void;
     ngOnDestroy(): void;
     writeValue(value: NzCheckBoxOptionInterface[]): void;
-    registerOnChange(fn: (_: NzCheckBoxOptionInterface[]) => {}): void;
-    registerOnTouched(fn: () => {}): void;
-    setDisabledState(isDisabled: boolean): void;
+    registerOnChange(fn: OnChangeType): void;
+    registerOnTouched(fn: OnTouchedType): void;
+    setDisabledState(disabled: boolean): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsCheckboxGroupComponent, [null, null, null, { optional: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsCheckboxGroupComponent, "bps-checkbox-group", ["bpsCheckboxGroup"], { "bpsDisabled": { "alias": "bpsDisabled"; "required": false; }; }, {}, never, never, false, never>;
 }

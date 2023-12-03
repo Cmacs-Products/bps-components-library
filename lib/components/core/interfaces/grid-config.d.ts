@@ -1,12 +1,10 @@
-import { CeldType } from '../enums/CeldType.enum';
-import { TemplateType } from '../enums/TemplateType.enum';
 import { TemplateRef } from "@angular/core";
 export interface TableConfig {
     fields: Field[];
     fieldId: string;
 }
 export interface Field {
-    celdType: CeldType;
+    celdType: any;
     display: string;
     property?: string;
     width?: string;
@@ -16,7 +14,7 @@ export interface Field {
     expandable?: boolean;
     select?: TableSelectConfig;
     sortOrder?: string | null;
-    editTemplate?: TemplateType;
+    editTemplate?: any;
     showSort?: boolean;
     showCustomFilter?: boolean;
     dateFormat?: string;

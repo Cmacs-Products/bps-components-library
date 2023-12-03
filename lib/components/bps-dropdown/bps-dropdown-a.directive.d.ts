@@ -1,6 +1,6 @@
-import { ElementRef, Renderer2 } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class BpsDropDownADirective {
-    private elementRef;
-    private renderer;
-    constructor(elementRef: ElementRef, renderer: Renderer2);
+    constructor();
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsDropDownADirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<BpsDropDownADirective, "a[bps-dropdown]", never, {}, {}, never, never, false, never>;
 }

@@ -1,11 +1,12 @@
-import { ElementRef, EventEmitter, Renderer2 } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { BpsCheckboxComponent } from './bps-checkbox.component';
-export declare class BpsCheckboxWrapperComponent {
-    readonly bpsOnChange: EventEmitter<string[]>;
+import * as i0 from "@angular/core";
+export declare class NzCheckboxWrapperComponent {
+    readonly nzOnChange: EventEmitter<any[]>;
     private checkboxList;
     addCheckbox(value: BpsCheckboxComponent): void;
     removeCheckbox(value: BpsCheckboxComponent): void;
-    outputValue(): string[];
     onChange(): void;
-    constructor(renderer: Renderer2, elementRef: ElementRef);
+    static ɵfac: i0.ɵɵFactoryDeclaration<NzCheckboxWrapperComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<NzCheckboxWrapperComponent, "nz-checkbox-wrapper", ["nzCheckboxWrapper"], {}, { "nzOnChange": "nzOnChange"; }, never, ["*"], false, never>;
 }

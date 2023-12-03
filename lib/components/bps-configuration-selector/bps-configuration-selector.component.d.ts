@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, OnDestroy, OnInit, EventEmitter, AfterViewInit } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class BpsConfigurationSelectorComponent<T = any> implements OnInit, OnDestroy, AfterViewInit {
     private cdr;
     private destroy$;
@@ -17,4 +18,6 @@ export declare class BpsConfigurationSelectorComponent<T = any> implements OnIni
     getCurrentElementIndex(): number;
     getPrevElement(): void;
     getNextElement(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsConfigurationSelectorComponent<any>, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsConfigurationSelectorComponent<any>, "bps-configuration-selector", ["bpsConfigurationSelector"], { "currentDisplayedData": { "alias": "currentDisplayedData"; "required": false; }; "propertyName": { "alias": "propertyName"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "data": { "alias": "data"; "required": false; }; }, { "currentDisplayedDataChange": "currentDisplayedDataChange"; }, never, never, false, never>;
 }

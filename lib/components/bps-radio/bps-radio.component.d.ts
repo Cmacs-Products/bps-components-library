@@ -1,36 +1,54 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
 import { FocusMonitor } from '@angular/cdk/a11y';
-import { AfterViewInit, ChangeDetectorRef, ElementRef, OnChanges, OnDestroy, Renderer2, SimpleChanges } from '@angular/core';
+import { Direction, Directionality } from '@angular/cdk/bidi';
+import { AfterViewInit, ChangeDetectorRef, ElementRef, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import { Subject } from 'rxjs';
-export declare type BpsRadioButtonType = 'variation1' | 'variation2' | 'variation3' | 'variation5' | 'variation6' | 'variation7' | 'variation8a' | 'variation8b' | 'variation8c' | 'variation8d' | 'variation8e' | 'variation9' | 'variation10' | 'variation11' | 'variation12';
-export declare class BpsRadioComponent implements ControlValueAccessor, AfterViewInit, OnChanges, OnDestroy {
+import { NzFormStatusService } from 'ng-zorro-antd/core/form';
+import { BooleanInput, NzSafeAny, OnChangeType, OnTouchedType } from 'ng-zorro-antd/core/types';
+import { BpsRadioButtonDirective } from './radio-button.directive';
+import { NzRadioService } from 'ng-zorro-antd/radio';
+import * as i0 from "@angular/core";
+export type BpsRadioButtonType = 'variation1' | 'variation2' | 'variation3' | 'variation5' | 'variation6' | 'variation7' | 'variation8a' | 'variation8b' | 'variation8c' | 'variation8d' | 'variation8e' | 'variation9' | 'variation10' | 'variation11' | 'variation12';
+export declare class BpsRadioComponent implements ControlValueAccessor, AfterViewInit, OnDestroy, OnInit {
+    private ngZone;
     private elementRef;
-    private renderer;
     private cdr;
+    private renderer;
     private focusMonitor;
-    select$: Subject<BpsRadioComponent>;
-    touched$: Subject<void>;
-    checked: boolean;
-    name: string;
-    isNgModel: boolean;
-    onChange: (_: boolean) => void;
-    onTouched: () => void;
-    inputElement: ElementRef;
-    bpsValue: any;
+    private directionality;
+    private nzRadioService;
+    private nzRadioButtonDirective;
+    nzFormStatusService?: NzFormStatusService;
+    static ngAcceptInputType_bpsDisabled: BooleanInput;
+    static ngAcceptInputType_bpsAutoFocus: BooleanInput;
+    private isNgModel;
+    private destroy$;
+    private isNzDisableFirstChange;
+    isChecked: boolean;
+    name: string | null;
+    isRadioButton: boolean;
+    onChange: OnChangeType;
+    onTouched: OnTouchedType;
+    inputElement: ElementRef<HTMLInputElement>;
+    bpsValue: NzSafeAny | null;
     bpsDisabled: boolean;
     bpsAutoFocus: boolean;
     bpsRadioButtonType: BpsRadioButtonType;
-    updateAutoFocus(): void;
-    onClick(event: MouseEvent): void;
+    dir: Direction;
     focus(): void;
     blur(): void;
-    markForCheck(): void;
-    constructor(elementRef: ElementRef, renderer: Renderer2, cdr: ChangeDetectorRef, focusMonitor: FocusMonitor);
-    setDisabledState(isDisabled: boolean): void;
+    constructor(ngZone: NgZone, elementRef: ElementRef, cdr: ChangeDetectorRef, renderer: Renderer2, focusMonitor: FocusMonitor, directionality: Directionality, nzRadioService: NzRadioService | null, nzRadioButtonDirective: BpsRadioButtonDirective | null, nzFormStatusService?: NzFormStatusService);
+    setDisabledState(disabled: boolean): void;
     writeValue(value: boolean): void;
-    registerOnChange(fn: (_: boolean) => {}): void;
-    registerOnTouched(fn: () => {}): void;
+    registerOnChange(fn: OnChangeType): void;
+    registerOnTouched(fn: OnTouchedType): void;
+    ngOnInit(): void;
     ngAfterViewInit(): void;
-    ngOnChanges(changes: SimpleChanges): void;
     ngOnDestroy(): void;
+    private setupClickListener;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsRadioComponent, [null, null, null, null, null, { optional: true; }, { optional: true; }, { optional: true; }, { optional: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsRadioComponent, "[bps-radio],[bps-radio-button]", ["bpsRadio"], { "bpsValue": { "alias": "bpsValue"; "required": false; }; "bpsDisabled": { "alias": "bpsDisabled"; "required": false; }; "bpsAutoFocus": { "alias": "bpsAutoFocus"; "required": false; }; "bpsRadioButtonType": { "alias": "bpsRadioButtonType"; "required": false; }; }, {}, never, ["*"], false, never>;
 }

@@ -1,7 +1,20 @@
 import { ChangeDetectorRef, EventEmitter, OnDestroy, OnInit, AfterViewInit, TemplateRef, TrackByFunction, OnChanges, SimpleChanges, ElementRef } from '@angular/core';
 import { NzI18nService } from 'ng-zorro-antd/i18n';
 import { TableConfig, Field } from '../core/interfaces/grid-config';
-export declare type BpsTableType = 'report' | 'home' | 'glass_profile';
+import * as i0 from "@angular/core";
+export type BpsTableType = 'report' | 'home' | 'glass_profile';
+export declare var TemplateType: {
+    Date: string;
+    Select: string;
+    Number: string;
+    String: string;
+    Boolean: string;
+    Time: string;
+};
+export declare var CeldType: {
+    Default: string;
+    TemplateRef: string;
+};
 export declare class BpsTableComponent<T = any> implements OnInit, OnDestroy, AfterViewInit, OnChanges {
     private cdr;
     private i18n;
@@ -105,6 +118,8 @@ export declare class BpsTableComponent<T = any> implements OnInit, OnDestroy, Af
     selectRow(data: any, selectionOnly?: boolean): void;
     expandRow(data: any, $event: any): void;
     changeIcon($event: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsTableComponent<any>, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsTableComponent<any>, "bps-table", ["bpsTable"], { "data": { "alias": "data"; "required": false; }; "frontPagination": { "alias": "frontPagination"; "required": false; }; "total": { "alias": "total"; "required": false; }; "pageIndex": { "alias": "pageIndex"; "required": false; }; "pageSize": { "alias": "pageSize"; "required": false; }; "showPagination": { "alias": "showPagination"; "required": false; }; "paginationPosition": { "alias": "paginationPosition"; "required": false; }; "bordered": { "alias": "bordered"; "required": false; }; "widthConfig": { "alias": "widthConfig"; "required": false; }; "loading": { "alias": "loading"; "required": false; }; "loadingDelay": { "alias": "loadingDelay"; "required": false; }; "loadingIndicator": { "alias": "loadingIndicator"; "required": false; }; "scroll": { "alias": "scroll"; "required": false; }; "title": { "alias": "title"; "required": false; }; "footer": { "alias": "footer"; "required": false; }; "noResult": { "alias": "noResult"; "required": false; }; "pageSizeOptions": { "alias": "pageSizeOptions"; "required": false; }; "showQuickJumper": { "alias": "showQuickJumper"; "required": false; }; "showSizeChanger": { "alias": "showSizeChanger"; "required": false; }; "showTotal": { "alias": "showTotal"; "required": false; }; "hideOnSinglePage": { "alias": "hideOnSinglePage"; "required": false; }; "simple": { "alias": "simple"; "required": false; }; "virtualItemSize": { "alias": "virtualItemSize"; "required": false; }; "virtualMaxBufferPx": { "alias": "virtualMaxBufferPx"; "required": false; }; "virtualMinBufferPx": { "alias": "virtualMinBufferPx"; "required": false; }; "virtualForTrackBy": { "alias": "virtualForTrackBy"; "required": false; }; "inlineEdit": { "alias": "inlineEdit"; "required": false; }; "singleSort": { "alias": "singleSort"; "required": false; }; "config": { "alias": "config"; "required": false; }; "gridID": { "alias": "gridID"; "required": false; }; "filterPlaceholder": { "alias": "filterPlaceholder"; "required": false; }; "tableType": { "alias": "tableType"; "required": false; }; "expandable": { "alias": "expandable"; "required": false; }; "moreMenu": { "alias": "moreMenu"; "required": false; }; "deleteMenu": { "alias": "deleteMenu"; "required": false; }; "rowExpandTemplate": { "alias": "rowExpandTemplate"; "required": false; }; }, { "pageIndexChange": "pageIndexChange"; "currentPageDataChange": "currentPageDataChange"; "queryParamsChange": "queryParamsChange"; "pageSizeChange": "pageSizeChange"; "onclickRow": "onclickRow"; "ondblclickRow": "ondblclickRow"; "selectionChange": "selectionChange"; "sortChange": "sortChange"; "configChange": "configChange"; "onedit": "onedit"; "searchValueChange": "searchValueChange"; "moreBtnClicked": "moreBtnClicked"; "deleteBtnClicked": "deleteBtnClicked"; "expandChange": "expandChange"; }, never, never, false, never>;
 }
 export interface CheckboxSelect {
     data: any;

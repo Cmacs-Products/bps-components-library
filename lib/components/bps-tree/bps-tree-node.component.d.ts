@@ -1,6 +1,10 @@
 import { ChangeDetectorRef, ElementRef, NgZone, OnChanges, OnDestroy, OnInit, Renderer2, TemplateRef } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { NzFormatBeforeDropEvent, NzNoAnimationDirective, NzTreeBaseService, NzTreeNode } from 'ng-zorro-antd/core';
+import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
+import { NzFormatBeforeDropEvent } from './tree/nz-tree-base.definitions';
+import { NzTreeBaseService } from './tree/nz-tree-base.service';
+import { NzTreeNode } from './tree/nz-tree-base-node';
+import * as i0 from "@angular/core";
 export declare class BpsTreeNodeComponent implements OnInit, OnChanges, OnDestroy {
     nzTreeService: NzTreeBaseService;
     private ngZone;
@@ -113,4 +117,6 @@ export declare class BpsTreeNodeComponent implements OnInit, OnChanges, OnDestro
     ngOnInit(): void;
     ngOnChanges(): void;
     ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BpsTreeNodeComponent, [null, null, null, null, null, { optional: true; host: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BpsTreeNodeComponent, "bps-tree-node", ["bpsTreeNode"], { "bpsTreeNode": { "alias": "bpsTreeNode"; "required": false; }; "bpsShowLine": { "alias": "bpsShowLine"; "required": false; }; "bpsShowExpand": { "alias": "bpsShowExpand"; "required": false; }; "bpsCheckable": { "alias": "bpsCheckable"; "required": false; }; "bpsAsyncData": { "alias": "bpsAsyncData"; "required": false; }; "bpsHideUnMatched": { "alias": "bpsHideUnMatched"; "required": false; }; "bpsNoAnimation": { "alias": "bpsNoAnimation"; "required": false; }; "bpsSelectMode": { "alias": "bpsSelectMode"; "required": false; }; "bpsShowIcon": { "alias": "bpsShowIcon"; "required": false; }; "bpsExpandedIcon": { "alias": "bpsExpandedIcon"; "required": false; }; "bpsTreeTemplate": { "alias": "bpsTreeTemplate"; "required": false; }; "bpsBeforeDrop": { "alias": "bpsBeforeDrop"; "required": false; }; "bpsSearchValue": { "alias": "bpsSearchValue"; "required": false; }; "bpsCustomTree": { "alias": "bpsCustomTree"; "required": false; }; "bpsDraggable": { "alias": "bpsDraggable"; "required": false; }; "bpsDefaultExpandAll": { "alias": "bpsDefaultExpandAll"; "required": false; }; "bpsExpandAll": { "alias": "bpsExpandAll"; "required": false; }; }, {}, never, never, false, never>;
 }
